@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"><!--Admite una amplia variedad de caracteres y símbolos-->
+    <title>Perfumeria Virtual</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a La Perfumeria Virtual</h1> <!-- Título principal del encabezado -->
+        <p>Tienda de perfumes en linea</p> <!-- Párrafo en el encabezado -->
+    </header>
+
+    <section>
+        <h2>Nuestros Productos Destacados</h2> <!-- Título de la sección -->
+        <p>Descubre nuestra amplia gama de <b>perfumes de alta calidad<b> a <b>precios competitivos</b>.</p>
+        <!-- Párrafo con texto y texto en negrita (entre etiquetas <b>) --><br><br>
+
+        <section>
+            <p><b>Perfume:</b></p><h3>Viktor and Rolf Spicebomb Extreme Men's Eau de Parfum Spray</h3>
+        </section>
+        <!-- Título "Perfume" en negrita y nombre del perfume -->
+        
+        <section>
+            <p><b>Precio:</b><br>Antes: <strike>$3,500</strike><br>Ahora: $3,100<br>Ahorras: $400</p> 
+        </section>
+        <!-- Título "Precio" en negrita, precio tachado, precio actual -->
+
+        <img src="perfume1.png">
+
+        <form id="ordenForm1">
+            <label for="producto1">Cantidad:</label>
+            <input type="number" id="producto1" name="producto1" min="0" max="10">
+            
+            <button type="button" onclick="
+                var cantidadProducto1 = parseInt(document.getElementById('producto1').value) || 0;
+                var precioPorPerfume1 = 3100.00;
+                var totalOrden = cantidadProducto1 * precioPorPerfume1;
+                document.getElementById('resultadoOrden').innerHTML = '<p>$' + totalOrden.toFixed(2) + '</p>';
+            ">Total<div id="resultadoOrden"></div>
+            </button>
+        </form>
+
+        <p><b>Descripcion del perfume:</b></p> <!-- Título "Descripción del perfume" en negrita -->
+        <ul>
+            <li>Notas: vainilla, tabaco, canela, comino, Whisky Bourbon y azafrán</li> <!-- Lista de características -->
+            <li>Para todos los tipos de piel</li>
+            <li>Fragancia duradera</li>
+            <li>Aumenta la atracción</li>
+            <li>100 ml</li>
+        </ul>
+        <br><br><br>
+    </section>
+
+    <section>
+        <section>
+            <p><b>Perfume:</b></p> <h3>Jean Paul Gaultier Le Beau Eau de Parfum</h3>
+        </section>
+        <!-- Título "Perfume" en negrita y nombre del perfume -->
+        <p><b>Precio:</b><br>Antes: <strike>$2,950</strike><br>Ahora: $2,480<br>Ahorras: $470</p> 
+        <!-- Título "Precio" en negrita y precio -->
+        
+        <img src="perfume2.png">
+        <!-- Imagen del producto con altura de 400px -->
+        
+        <form id="ordenForm2">
+            <label for="producto2">Cantidad:</label>
+            <input type="number" id="producto2" name="producto2" min="0" max="10">
+            
+            <button type="button" onclick="
+                var cantidadProducto2 = parseInt(document.getElementById('producto2').value) || 0;
+                var precioPorPerfume2 = 2480.00;
+                var totalOrden = cantidadProducto2 * precioPorPerfume2;
+                document.getElementById('resultadoOrden2').innerHTML = '<p>$' + totalOrden.toFixed(2) + '</p>';
+            ">Total<div id="resultadoOrden2"></div></button>
+        </form>
+
+        <p><b>Descripcion del perfume:</b></p> <!-- Título "Descripción del perfume" en negrita -->
+        <ul>
+            <li>Notas de Salida: piña, iris, ciprés y jengibre</li> <!-- Lista de características -->
+            <li>Corazón: coco y notas amaderadas</li>
+            <li>Para hombre adulto</li>
+            <li>Dulce</li>
+            <li>125 ml</li>
+        </ul>
+        <br><br><br>
+    </section>
+
+    <section>
+        <section>
+            <p><b>Perfume:</b></p> <h3>Bvlgari Man In Black Eau de Parfum</h3>
+        </section>
+        <!-- Título "Perfume" en negrita y nombre del perfume -->
+        <p><b>Precio:</b><br>Antes: <strike>$3,280</strike><br>Ahora: $2,850<br>Ahorras: $430</p> 
+        <!-- Título "Precio" en negrita y precio -->
+        
+        <img src="perfume3.png">
+        <!-- Imagen del producto con altura de 300px -->
+
+        <form id="ordenForm3">
+            <label for="producto3">Cantidad:</label>
+            <input type="number" id="producto3" name="producto3" min="0" max="10">
+            
+            <button type="button" onclick="
+                var cantidadProducto3 = parseInt(document.getElementById('producto3').value) || 0;
+                var precioPorPerfume3 = 2850.00;
+                var totalOrden = cantidadProducto3 * precioPorPerfume3;
+                document.getElementById('resultadoOrden3').innerHTML = '<p>$' + totalOrden.toFixed(2) + '</p>';
+            ">Total<div id="resultadoOrden3"></div></button>
+        </form>
+
+        <p><b>Descripcion del perfume:</b></p> <!-- Título "Descripción del perfume" en negrita -->
+        <ul>
+            <li>Notas de Salida: especias, ron y tabaco</li> <!-- Lista de características -->
+            <li>Corazón: cuero, iris y nardos</li>
+            <li>Base: haba, tonka y madera de gaiac benjuí</li>
+            <li>Altamente masculino</li>
+            <li>Aroma misterioso</li>
+            <li>100 ml</li>
+        </ul>
+    </section>
+
+<footer>
+    <form name= "Miformulario" id="Miformulario">
+        <fieldset style="background: #FCFFC7; border: 4px solid #25D4F0;">
+            <legend>Información del cliente</legend>
+            <input type="text" placeholder="Nombre(s)" name="nombre"><br>
+            <input type="text" placeholder="Apellidos" name="apellido"><br>
+            <input type="text" placeholder="Ciudad" name="ciudad"><br>
+            <input type="text" placeholder="Correo electronico" name="email" id="email"><br>
+            <input type="password" placeholder="Contraseña" name="password" id="password"><br><br>
+            <input type="submit" value="Enviar" onclick="alert('Datos enviados correctamente. Su pedido está en camino.')"/>
+        </fieldset>
+    </form>
+</footer>
+
+
+
+
+    <section>
+        <p><b>PARA MAYOR INFORMACIÓN,</b> <a href="https://www.facebook.com/Moycker/" target="_BLANK"><small>PRESIONE AQUÍ</small></a></p>
+        <!-- Texto en negrita y enlace a Facebook (se abre en una nueva ventana/tab) -->
+        <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
+        <!-- Párrafo con pregunta de contacto -->
+        <p>Email: axelecb18@gmail.com</p>
+        <p>Teléfono: +52-732-122-1917</p>
+    </section>
+
+    <footer>
+        <img src="logo.png" height="600px">
+        &copy; 2023 Perfumeria Virtual <!-- Derechos de autor en el pie de página -->
+    </footer>
+</body>
+</html>
